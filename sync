@@ -7,12 +7,9 @@ cd /tmp/rom
 # I want to sync aex source!
   repo init -u https://github.com/Kang-OS-R/android_manifest -b eleven
 
-#syncing Repo
-repo sync -c --force-sync --no-tags --no-clone-bundle -j10(nproc --all) --optimized-fetch --prune
-
 # Clone local manifest! So that no need to manually git clone repos or change hals, you can use normal git clone or rm and re clone, they will cost little more time, and you may get timeout! Let's make it quit and depth=1 too.
 # My local manifest can do all clone, and removing or changing repository i need, so lets use it! I am lazy to manually git clone!
 git clone https://github.com/Realme-G95-Series/proprietary_vendor_realme_RMX2151.git vendor/realme/RMX2151 && git clone https://github.com/Realme-G95-Series/device_realme_RMX2151.git device/realme/RMX2151
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
