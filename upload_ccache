@@ -13,3 +13,9 @@ time com ccache 1 # Compression level 1, its enough
 mkdir -p ~/.config/rclone
 echo "$rclone_config" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
 time rclone copy ccache.tar.gz Sauraj G Drive:ccache/ci3 -P # apon is my rclone config name (first line without [] of ~/.config/rclone/rclone.conf file from rclone setupped pc), ccache/ci2 is where ccache will be saved in my cloud, use yours one
+
+[Sauraj G Drive]
+type = drive
+token = {"access_token":"ya29.a0AfH6SMDux2hNYzPfFIglNjel-TdHLEmMIlB5xf0IAJh0WWQZqlSgEynlChFbRKJ5viPjWk3jrlj1JDw0pDrp8bqV6QqS5zacYqR8DBR4_HI3jaAulfOe3q4eiJzt6Jc7XYJ_TXFE93QAX11qXhaWlaWvwnNS","token_type":"Bearer","refresh_token":"1//0gaGhZvhxrFddCgYIARAAGBASNwF-L9IrDik6pIiCTqYHf-5T3grsHxpDpnhP-gMigfNumK1lrOVQg0ZK4DGQwWUXtPQBgPN7i1U","expiry":"2021-03-26T19:35:27.694289257Z"}
+client_id = 917212316332-8hqev6qfrl6l5at8dbk4e3c9q6ae6rhi.apps.googleusercontent.com
+client_secret = 0upY7uVpfCrqUZDeRMgTrZ_u
